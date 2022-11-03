@@ -66,6 +66,7 @@ router.post('/login', async (req,res) => {
     } else {
         res.status(400).send('Password is wrong');
     }
+})
     router.post('/register', async (req,res)=>{
         // let user = new User({
         //     name: req.body.name,
@@ -111,7 +112,4 @@ router.post('/login', async (req,res) => {
             return res.status(400).json({success: false, error:err})
         })
     })
-
-
-})
 module.exports =router;
