@@ -73,7 +73,7 @@ router.post('/login', async (req,res) => {
             email: req.body.email,
             passwordHash: bcrypt.hashSync(req.body.password, 10),
             phone: req.body.phone,
-            isAdmin: true, //req.body.isAdmin,
+            isAdmin: req.body.isAdmin,
             street: req.body.street,
             apartment: req.body.apartment,
             zip: req.body.zip,
