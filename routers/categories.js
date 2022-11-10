@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get(`/`, async (req, res) =>{
-    const categoryList = await Category.find().select('name image -_id');
+    const categoryList = await Category.find();//.select('name image -_id');
 
     if(!categoryList) {
         res.status(500).json({success: false})
